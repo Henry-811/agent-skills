@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [{
+      "hooks": [{
+        "type": "command",
+        "command": "python -c \"import os,runpy; runpy.run_path(os.path.join(os.environ.get('CODEX_HOME', os.path.expanduser('~/.codex')), 'hooks', 'methodology_guard.py'), run_name='__main__')\"",
+        "timeout": 5
+      }]
+    }]
+  }
+}
