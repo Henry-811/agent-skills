@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agent-skills",
+  "version": "0.1.0",
+  "description": "Development methodology skills: concept exploration, product validation, implementation principles, and platform porting.",
+  "author": { "name": "Henry-811" },
+  "repository": "https://github.com/Henry-811/agent-skills",
+  "license": "MIT",
+  "keywords": ["agent-skills", "development", "product-design", "code-review"]
+}

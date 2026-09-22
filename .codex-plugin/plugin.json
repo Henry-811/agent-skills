@@ -1,0 +1,19 @@
+{
+  "name": "agent-skills",
+  "version": "0.1.0",
+  "description": "Development methodology skills: concept exploration, product validation, implementation principles, and platform porting.",
+  "author": { "name": "Henry-811" },
+  "repository": "https://github.com/Henry-811/agent-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Skills",
+    "shortDescription": "从概念澄清到实现验证的开发方法论",
+    "longDescription": "包含 concept-exploration、product-check、dev-principles 和 platform-port 四项技能，帮助 coding agent 澄清需求、检查业务规则、实现并验证代码和移植界面。",
+    "developerName": "Henry-811",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://github.com/Henry-811/agent-skills",
+    "defaultPrompt": ["用 concept-exploration 澄清新功能的目标和 MVP。", "用 product-check 校验业务规则和验收场景。", "用 dev-principles 审查代码并给出可验证的发现。"]
+  }
+}
