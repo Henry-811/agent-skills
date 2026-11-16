@@ -203,20 +203,21 @@ background: var(--qt-card-bg);
 - **SHOULD** 避免依赖 `height: auto` 动画（大多数受限平台不支持）
 - **MUST** Drawer/Modal 动画期间禁止底层穿透点击
 - **SHOULD** 动效时长、缓动函数与 Web 对齐，或在平台不支持时做显式降级（如去掉动画，改为直接切换）
-- **SHOULD** `transition` 不生效时检查是否因为属性不支持 `transition`（如 `visibility`、`display`）
+- **SHOULD** 显隐过渡要在目标渲染器验证。`visibility` 可在 `visible` 与 `hidden` 间切换，渐隐用 `opacity`。用 `display` 做离散过渡时，确认支持 `transition-behavior: allow-discrete`。缺少支持时，等渐隐结束再隐藏或卸载元素。
 
 ---
 
 ## 9. 平台 API 替代策略
 
-不要在受限平台中使用浏览器 API，按以下映射替代：
+目标运行时缺少浏览器 API 或行为有差异时，按下表选择替代方案。
 
 | 浏览器 API | 替代方案 |
 |-----------|---------|
 | `document.querySelector` / DOM 查询 | 状态驱动渲染（React state/context） |
 | `element.getBoundingClientRect` | 平台 selector query（Taro: `createSelectorQuery`） |
 | `window.addEventListener('resize')` | 平台 onResize / `Taro.onWindowResize` |
-| `localStorage` / `sessionStorage` | 平台 storage API（`Taro.setStorageSync`） |
+| `localStorage` | 需要跨会话保留的数据可用平台持久缓存（如 `Taro.setStorageSync`）。确认同一来源下应共享的数据在目标端仍可共享。 |
+| `sessionStorage` | 按页面会话隔离数据。验证同一会话刷新后仍能读取、两个独立窗口的修改互不影响、会话结束后新会话读不到旧值。目标端缺少原生会话存储时，先确定对应的会话边界，再选择存储和清理方式。 |
 | `window.location` / `history` | 平台 router（`Taro.navigateTo`） |
 | `navigator.clipboard` | `Taro.setClipboardData` |
 | `navigator.share` | 平台分享 API |
