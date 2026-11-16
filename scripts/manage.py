@@ -10,7 +10,7 @@ import tempfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ("concept-exploration", "product-check", "dev-principles", "platform-port")
+SKILLS = ("concept-exploration", "product-check", "dev-principles", "platform-port", "web-interaction-patterns")
 
 
 def installation_plan(root, home, target, *, rules=False, hook=False, codex_home=None):

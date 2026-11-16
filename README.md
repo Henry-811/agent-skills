@@ -20,6 +20,7 @@ The depth of the process should fit the task. A small bug fix should stay small;
 | [product-check](skills/product-check/SKILL.md) | Check business rules, user journeys, boundaries, and acceptance scenarios once the direction is clear. |
 | [dev-principles](skills/dev-principles/SKILL.md) | Guide implementation and review, with references for architecture, testing, API contracts, observability, and database migrations. |
 | [platform-port](skills/platform-port/SKILL.md) | Preserve structure, appearance, and behavior when adapting a web interface to a mini program, app, or WebView. |
+| [web-interaction-patterns](skills/web-interaction-patterns/SKILL.md) | Choose components, describe what happens after each action, and account for keyboard, pointer, and touch interaction on desktop and mobile. |
 
 The first three skills support the path from an idea to a verified implementation. Use `platform-port` when moving an interface between platforms.
 
@@ -33,7 +34,7 @@ Use the community [Skills CLI](https://github.com/vercel-labs/skills) with a sup
 npx skills add Henry-811/agent-skills
 ```
 
-Choose the skills, agents, and installation scope that suit your workflow. To install all four globally for Codex and Claude Code:
+Choose the skills, agents, and installation scope that suit your workflow. To install the full collection globally for Codex and Claude Code:
 
 ```sh
 npx skills add Henry-811/agent-skills --skill '*' -a codex claude-code -g

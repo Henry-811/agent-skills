@@ -23,7 +23,8 @@ class InstallationTests(unittest.TestCase):
         for target in ("codex", "claude-code"):
             files, skills_root = manage.installation_plan(ROOT, self.home, target, rules=True, hook=True)
             count, _ = manage.install(files, skills_root, self.home)
-            self.assertEqual(count, 13)
+            self.assertEqual(count, len(files))
+            self.assertTrue((skills_root / "web-interaction-patterns/references/component-choice.md").is_file())
             self.assertEqual(manage.differences(files, skills_root), [])
             self.assertEqual(manage.install(files, skills_root, self.home)[0], 0)
             self.assertIn(b"# Global Development Methodology", next(data for path, data in files.items() if path.name in ("CLAUDE.md", "AGENTS.md")))

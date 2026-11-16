@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Agent Skills",
     "shortDescription": "从概念澄清到实现验证的开发方法论",
-    "longDescription": "包含 concept-exploration、product-check、dev-principles 和 platform-port 四项技能，帮助 coding agent 澄清需求、检查业务规则、实现并验证代码和移植界面。",
+    "longDescription": "帮助 coding agent 澄清需求、检查业务规则、设计 Web 组件交互、实现并验证代码，以及跨平台移植界面。",
     "developerName": "Henry-811",
     "category": "Productivity",
     "capabilities": [],

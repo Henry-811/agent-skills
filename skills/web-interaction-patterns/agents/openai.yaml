@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web 交互惯例"
+  short_description: "设计页面的组件职责、操作反馈和跨端行为，也可评审已有交互问题"
+  default_prompt: "请用 $web-interaction-patterns 说明这个页面展示哪些组件、各自怎样操作，以及桌面和手机端有哪些差异。"
